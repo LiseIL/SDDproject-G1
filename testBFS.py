@@ -53,12 +53,12 @@ class testBFS(unittest.TestCase):
 
     def testBreadthFirstSearchgraph01234(self):
         graph = copy(self.graph01324)
-        res = graph.BreadthFirstSearch2(0, self.marks5)
+        res = graph.BreadthFirstSearch(0, self.marks5)
         expected = [0, 1, 2, 3, 4]
         self.assertEqual(res, expected)
 
     def test2BreadthFirstSearchgraph01234(self):
         graph = copy(self.graph01324)
-        res = graph.BreadthFirstSearch2(1, self.marks5)
+        res = graph.BreadthFirstSearch(1, self.marks5)
         expected = [1, 0, 2, 3, 4]
         self.assertEqual(res, expected)
