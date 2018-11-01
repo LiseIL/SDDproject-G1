@@ -38,40 +38,47 @@ class testBFS(unittest.TestCase):
         self.graph01257 = Graph(self.vertices01257, self.successors01257)
         self.graphEmpty = Graph([],[])
 
-    def testBFSEmpty(self):
+        self.marks4 = [False]*4
+        self.marks5 = [False] * 5
+        
+    @unittest.skip
+    def testBreadthFirstSearchEmpty(self):
         graph = copy(self.graphEmpty)
-        res = graph.BFS([])
+        res = graph.BreadthFirstSearch(None, [])
         expected = []
         self.assertEqual(res, expected)
 
-    def testBFSgraph1257(self):
+    @unittest.skip
+    def testBreadthFirstSearchgraph1257(self):
         graph = copy(self.graph1257)
-        res = graph.BFS()
+        res = graph.BreadthFirstSearch(2, self.marks4)
         expected = [2, 1, 5, 7]
         self.assertEqual(res, expected)
 
-    def testBFSgraph1324(self):
+    @unittest.skip
+    def testBreadthFirstSearchgraph1324(self):
         graph = copy(self.graph1257)
-        res = graph.BFS()
+        res = graph.BreadthFirstSearch(1, self.marks4)
         expected = [1, 2, 3, 4]
         self.assertEqual(res, expected)
 
-    def testBFSgraph0123(self):
+    @unittest.skip
+    def testBreadthFirstSearchgraph0123(self):
         graph = copy(self.graph0123)
-        res = graph.BFS()
-        expected = [0,1,2,3]
+        res = graph.BreadthFirstSearch(0, self.marks4)
+        expected = [0, 1, 2, 3]
         self.assertEqual(res, expected)
 
-    def testBFSgraph01257(self):
+    @unittest.skip
+    def testBreadthFirstSearchgraph01257(self):
         graph = copy(self.graph01257)
-        res = graph.BFS()
-        expected = [0,1,2,5,7]
+        res = graph.BreadthFirstSearch(0, self.marks5)
+        expected = [0, 1, 2, 5, 7]
         self.assertEqual(res, expected)
-    
-    def testBFSgraph01257False(self):
+
+    @unittest.skip
+    def testBreadthFirstSearchgraph01257False(self):
         graph = copy(self.graph01257)
-        res = graph.BFS()
+        res = graph.BreadthFirstSearch(0, self.marks5)
         expected = [7, 5, 2, 1, 0]
         self.assertTrue(res != expected)
-        
-
