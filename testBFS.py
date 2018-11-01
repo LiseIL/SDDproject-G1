@@ -67,4 +67,11 @@ class testBFS(unittest.TestCase):
         res = graph.BFS()
         expected = [0,1,2,5,7]
         self.assertEqual(res, expected)
+    
+    def testBFSgraph01257False(self):
+        graph = copy(self.graph01257)
+        res = graph.BFS()
+        expected = [7, 5, 2, 1, 0]
+        self.assertTrue(res != expected)
+        
 
