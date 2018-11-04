@@ -1,0 +1,5 @@
+Pour la classe graph, on suppose que :
+	- les graphes sont non orientés
+	- les sommets sont un ensemble d'entiers continu commençant à 0 ({0, 1 ... n})
+
+On fait le choix de retourner une liste pour BreadthFirstSearch afin de tester cette méthode.
